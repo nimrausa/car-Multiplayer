@@ -23,8 +23,8 @@ public class AIPath : MonoBehaviour
                 node.name = count.ToString();
 
 
-            Transform NextNode = transform.FindChild((count + 1).ToString());
-            Transform PreviousNode = transform.FindChild((count - 1).ToString());
+            Transform NextNode = transform.Find((count + 1).ToString());
+            Transform PreviousNode = transform.Find((count - 1).ToString());
 
             if (NextNode)
             {

@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
- using UnityStandardAssets.ImageEffects;
+//using UnityStandardAssets.ImageEffects;
 
 public class VehicleCamera : MonoBehaviour
 {
@@ -67,14 +67,15 @@ public class VehicleCamera : MonoBehaviour
         farDistance = Vector3.Distance(farCameraPosition, target.position);
         if (farDistance < 100.0f && farCameraView) farCameraView = false;
 
-        transform.GetComponent<Blur>().enabled = GameUI.manage.gamePaused ? true : false;
+        //transform.GetComponent<Blur>().enabled = GameUI.manage.gamePaused ? true : false;
 
         // add MotionBlur effect to camera
+        /*
         if (AIControl.CurrentVehicle.shifting || GameUI.manage.driftAmount > 25)
             transform.GetComponent<MotionBlur>().blurAmount = Mathf.Lerp(transform.GetComponent<MotionBlur>().blurAmount, 0.5f, Time.deltaTime * 5);
         else
            transform.GetComponent<MotionBlur>().blurAmount = Mathf.Lerp(transform.GetComponent<MotionBlur>().blurAmount, 0.0f, Time.deltaTime);
-
+        */
 
 
         if (Switch == -1)
